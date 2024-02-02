@@ -29,7 +29,7 @@ function Home() {
       setError("");
       setShortenUrl("");
       setLoading(true);
-      axios.post(`Process.env.BACKEND/url/shorten`, { longUrl })
+      axios.post(`https://url-shortner-wkg7.onrender.com/url/shorten`, { longUrl })
         .then((response) => {
           setShortenUrl(response.data.data.shortUrl);
           setDisableButton(true);
